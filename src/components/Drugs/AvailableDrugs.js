@@ -48,6 +48,7 @@ const AvailableDrugs = () => {
   const drugsList = DUMMY_DRUGS.map((x) => (
     <DrugItem
       id={x.id}
+      key={x.id}
       itemName={x.name}
       itemDescription={x.description}
       itemPrice={x.price}
