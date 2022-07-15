@@ -5,6 +5,7 @@ import Card from "../UI/Card";
 
 import styles from "./AvailableDrugs.module.css";
 
+//надо добавить больше айтемов для создания фильтра по категориям, через селектор
 const DUMMY_DRUGS = [
   {
     id: "d1",
