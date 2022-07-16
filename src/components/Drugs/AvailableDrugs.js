@@ -10,13 +10,13 @@ const DUMMY_DRUGS = [
   {
     id: "d1",
     name: "Аспирин, 10шт",
-    description: "Для лечения от головной боли",
+    description: "Таблетки от головной боли",
     price: 45.0,
   },
   {
     id: "d2",
     name: "Кетанов, 12шт",
-    description: "Для лечения зубной боли",
+    description: "Таблетки от зубной боли",
     price: 40.0,
   },
   {

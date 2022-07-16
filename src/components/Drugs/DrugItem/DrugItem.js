@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import DrugItemForm from "./DrugItemForm";
+import CartContext from "../../../store/cart-context";
 
 import styles from "./DrugItem.module.css";
 
 const DrugItem = (props) => {
+  const cartCtx = useContext(CartContext);
+
   const priceFormatted = `${props.itemPrice} руб.`;
+
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.itemName,
+      amount: amount,
+      price: props.itemPrice,
+    });
+  };
 
   return (
     <li className={styles.drug}>
@@ -12,7 +24,7 @@ const DrugItem = (props) => {
       <div className={styles.description}>{props.itemDescription}</div>
       <div className={styles.price}>{priceFormatted}</div>
       <div>
-        <DrugItemForm />
+        <DrugItemForm onAddToCart={addToCartHandler} />
       </div>
     </li>
   );

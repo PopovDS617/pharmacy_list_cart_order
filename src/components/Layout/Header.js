@@ -6,12 +6,12 @@ import styles from "./Header.module.css";
 
 import pharmaImage from "../../assets/pharmacy_header.jpg";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <React.Fragment>
       <header className={styles.header}>
         <h1>Сельская Аптека №1</h1>
-        <HeaderCartButton>Корзина</HeaderCartButton>
+        <HeaderCartButton onClick={props.onShowCart}>Корзина</HeaderCartButton>
       </header>
       <div className={styles["main-image"]}>
         <img src={pharmaImage} alt="picture of pharmacy shelfs" />
